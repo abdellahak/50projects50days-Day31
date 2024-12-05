@@ -1,32 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Day 30 : Auto Text Effect</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Day 31 : Password Generator</title>
+  </head>
+  <body>
     <main>
-        <div class="generatorContainer">
-            <h1>Password Generator</h1>
-            <div class="password part">
-                <input type="text" readonly id="passwordInput" value="12345678">
-            </div>
-            <div class="generator part">
-                <div class="pwd-length">
-                    <h4>password length : </h4>
-                    <div class="length">
-                        <button class="divide ctrl">-</button>
-                        <input type="range" class="lengthInput">
-                        <button class="add ctrl">+</button>
-                    </div>
-                </div>
-            </div>
+      <div class="generatorContainer">
+        <h1>Password Generator</h1>
+        <div class="password part">
+          <input type="text" readonly id="passwordInput" value="12345678" />
         </div>
+        <form class="generator part">
+          <div class="pwd-length">
+            <h4>Password length:</h4>
+            <div class="length">
+              <button class="subtract ctrl" type="button">-</button>
+              <input
+                type="number"
+                class="password-length-input"
+                value="8"
+                min="1"
+                max="20"
+              />
+              <button class="add ctrl" type="button">+</button>
+            </div>
+          </div>
+          <div class="pwd-property">
+            <h4>Uppercase letters:</h4>
+            <label class="switch">
+              <input type="checkbox" id="uppercase" checked />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="pwd-property">
+            <h4>Lowercase letters:</h4>
+            <label class="switch">
+              <input type="checkbox" id="lowercase" checked />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="pwd-property">
+            <h4>Numbers:</h4>
+            <label class="switch">
+              <input type="checkbox" id="numbers" checked />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="pwd-property">
+            <h4>Symbols:</h4>
+            <label class="switch">
+              <input type="checkbox" id="symbols" checked />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="pwd-property">
+            <button type="submit" value="Generate Password" class="generatePwd">
+              Generate Password
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="copyright">&copy; designed by <a href="https://github.com/abdellahak" target="_blank" rel="noopener noreferrer">Abdellah Khouden</a></div>
     </main>
-    <script src="https://kit.fontawesome.com/1fbfbd99d6.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/1fbfbd99d6.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
-

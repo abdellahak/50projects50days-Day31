@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto";
+
 }
 
 main {
-  background-color: #F0F2F5;
-  height: 100vh;
-  width: 100vw;
+  background-color: #f0f2f5;
+  min-height: 100vh;
+  min-width: 100vw;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -17,42 +18,46 @@ main {
   gap: 30px;
   position: relative;
 }
-.generatorContainer>h1{
-  margin-block:20px;
+.generatorContainer{
+  width: 300px;
 }
-.part{
+.generatorContainer > h1 {
+  margin-block: 20px;
+  text-align: center;
+}
+.part {
   background-color: white;
   padding: 20px;
   border-radius: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   min-height: 100px;
   margin: 0px 0px 20px 0px;
 }
-#passwordInput{
+#passwordInput {
   border: none;
   font-size: 2.5rem;
   padding: 3px;
-  width: fit-content;
-  max-width: 400px;
-  min-width: 300px;
-}
-#passwordInput:focus{
-  outline: none;
-}
-.generator{
-  display: flex;
-}
-.pwd-length{
   width: 100%;
 }
-.length{
+#passwordInput:focus {
+  outline: none;
+}
+.generator {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.pwd-length {
+  width: 100%;
+}
+.length {
   display: flex;
   margin-block: 20px;
   gap: 20px;
   justify-content: space-evenly;
   width: 100%;
 }
-.ctrl{
+.ctrl {
   padding: 10px;
   aspect-ratio: 1/1;
   border-radius: 50%;
@@ -62,15 +67,97 @@ main {
   background-color: transparent;
   transition: all 0.3s ease-in;
   font-size: 1.4rem;
+  -moz-appearance: textfield;
 }
-.ctrl:hover{
+.ctrl:hover {
   background-color: black;
   opacity: 1.1;
   color: white;
 }
-.lengthInput{
-  -webkit-appearance: none;
-  background: transparent;
+
+.password-length-input {
+  font-size: 1.3rem;
+  border-radius: 8px;
+  padding: 5px;
   width: 100%;
-  height: 34px;
+}
+.password-length-input::-webkit-outer-spin-button,
+.password-length-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.password-length-input {
+  -moz-appearance: textfield;
+}
+
+.pwd-property {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  border: 1px solid #adb5bd;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.27em;
+  bottom: 0.25em;
+  background-color: #adb5bd;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: black;
+  border: 1px solid black;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px black;
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.4em);
+  background-color: #fff;
+}
+.generatePwd{
+  padding: 10px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  font-size: large;
 }
