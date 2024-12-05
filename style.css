@@ -4,7 +4,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto";
-
 }
 
 main {
@@ -18,7 +17,7 @@ main {
   gap: 30px;
   position: relative;
 }
-.generatorContainer{
+.generatorContainer {
   width: 300px;
 }
 .generatorContainer > h1 {
@@ -32,10 +31,11 @@ main {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   min-height: 100px;
   margin: 0px 0px 20px 0px;
+  display: flex;
 }
 #passwordInput {
   border: none;
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding: 3px;
   width: 100%;
 }
@@ -152,7 +152,7 @@ input:checked + .slider:before {
   transform: translateX(1.4em);
   background-color: #fff;
 }
-.generatePwd{
+.generatePwd {
   padding: 10px;
   border-radius: 10px;
   background-color: black;
